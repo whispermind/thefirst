@@ -1,3 +1,4 @@
+import { Children } from 'react'
 import styles from './stylesheet.module.css'
 const Layout = (props) => {
     const bg = {
@@ -11,8 +12,8 @@ const Layout = (props) => {
                     {props.title ? (<h3>{props.title}</h3>) : null}
                     <span className={styles.separator}></span>
                 </div>
-                <div className={styles.desc, styles.full}>
-                    {props.descr ? (<p>{props.descr}</p>) : null}
+                <div className={`${styles.desc} ${styles.full}`}>
+                    {props.children}
                 </div>
             </article>
         </div>
